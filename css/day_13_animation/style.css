@@ -1,0 +1,49 @@
+.box{
+width: 200px;
+height: 40px;
+background-color: red;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 12px;
+color: snow;
+animation: slider 10s infinite ;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out;
+
+
+}
+
+.box:hover{
+ 
+    /* animation-name: slider, bgchanger;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; */
+    animation: bgchanger 10s infinite;
+    cursor: pointer;
+}
+@keyframes bgchanger {
+    0%{
+      background-color: yellow;
+    }
+    20%{
+        background-color: orange;
+    }
+    50%{
+        background-color: cadetblue;
+    }
+    100%{
+        background-color: blue;
+    }
+}
+
+@keyframes slider {
+    from{
+        transform: scale(-3);
+        opacity: 0;
+    }anslate(0,200px )
+    to{
+        transform: scale(1) translate(0,200px );
+        opacity: 1;
+    }
+}

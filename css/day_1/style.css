@@ -1,0 +1,14 @@
+ /* dry principle */
+ div ,p {
+    color: red;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+ }
+ h3 {
+    color:rgb(30, 255, 0);
+ }
+
+ h1 {
+    color: rgb(18, 130, 18);
+ }

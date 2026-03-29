@@ -1,0 +1,24 @@
+.box-shadow {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  cursor: pointer;
+}
+.box-shadow:hover {
+  box-shadow: 5px 8px 5px rgba(24, 177, 232, 0.5);
+}
+p {
+  margin: 20px;
+  text-shadow: none;
+}
+p:hover {
+  text-shadow: 2px 2px 5px rgba(244, 27, 11, 0.9); 
+}
+.main {
+  display: flex;
+  gap: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 12px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,23 @@
+.hero{
+    width: 100%;
+    background-image: url('./background.jpg');
+     /* background: hsla(167, 90%, 94%, 0.1) url('./background.jpg') no-repeat center center ; */
+    /* background: linear-gradient( 135deg, #e66465, #9198e5, hsl(113, 72%, 65%));    /* background-size: 300px 150px  ; */
+    background-repeat: repeat; 
+    overflow:hidden;
+    aspect-ratio: 16/9;
+    background-clip: padding-box;
+    border: 5px solid rgba(47, 168, 215, 0.5);
+
+}
+
+.hero p{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+.hero img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}

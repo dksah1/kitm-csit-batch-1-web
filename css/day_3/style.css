@@ -1,0 +1,25 @@
+/* It follows the DRY principle  */
+div , p ,span {
+    /* background-color: lightblue; */
+    /* color: rgba(101, 221, 46, 0); */
+    /* color: #594949; */
+    /* color: hsl(100, 100%, 40%); */
+
+}
+
+html {
+    font-size: 24px;
+    font-family:'Times New Roman', Times, serif ;
+
+}
+
+
+div{
+   font-size: 2rem;
+
+}
+ p {
+    font-size: 1rem;
+
+ }
+

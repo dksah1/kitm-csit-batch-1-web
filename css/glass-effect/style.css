@@ -1,0 +1,19 @@
+
+body{
+    background: url('https://freefrontend.com/img/2026/2026-02-05-liquid-glass-effect_hu563657388210047011.webp') no-repeat center center fixed;
+    color: #fff;
+}
+.glass{
+background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(14.6px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.glass:hover {
+   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+   cursor: pointer;
+}
+
+/* From https://css.glass */

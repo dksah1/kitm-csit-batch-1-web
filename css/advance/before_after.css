@@ -1,0 +1,713 @@
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+  --surface-container-highest: #2d3449;
+  --background: #0b1326;
+  --secondary: #bcc7de;
+  --inverse-primary: #006591;
+  --error-container: #93000a;
+  --on-tertiary-container: #003b34;
+  --on-tertiary: #003731;
+  --outline: #88929b;
+  --inverse-surface: #dae2fd;
+  --secondary-container: #3e495d;
+  --on-secondary: #263143;
+  --tertiary-container: #00af9d;
+  --on-secondary-fixed-variant: #3c475a;
+  --on-error-container: #ffdad6;
+  --primary-fixed: #c9e6ff;
+  --surface: #0b1326;
+  --surface-container-low: #131b2e;
+  --primary-fixed-dim: #89ceff;
+  --primary-container: #0ea5e9;
+  --on-tertiary-fixed-variant: #005047;
+  --on-tertiary-fixed: #00201c;
+  --surface-tint: #89ceff;
+  --tertiary-fixed: #62fae3;
+  --on-secondary-container: #aeb9d0;
+  --primary: #89ceff;
+  --surface-container: #171f33;
+  --secondary-fixed: #d8e3fb;
+  --error: #ffb4ab;
+  --on-secondary-fixed: #111c2d;
+  --surface-variant: #2d3449;
+  --surface-container-lowest: #060e20;
+  --on-background: #dae2fd;
+  --on-error: #690005;
+  --outline-variant: #3e4850;
+  --on-surface: #dae2fd;
+  --on-surface-variant: #bec8d2;
+  --tertiary-fixed-dim: #3cddc7;
+  --surface-container-high: #222a3d;
+  --surface-bright: #31394d;
+  --surface-dim: #0b1326;
+  --on-primary: #00344d;
+  --on-primary-fixed-variant: #004c6e;
+  --on-primary-fixed: #001e2f;
+  --tertiary: #3cddc7;
+  --secondary-fixed-dim: #bcc7de;
+  --on-primary-container: #003751;
+  --inverse-on-surface: #283044;
+  --font-size-f1:14px;
+  --font-size-f2:18px;
+  --card-width: 16rem;
+
+    --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 36px;
+
+  /* 🔹 Font Sizes (rem) */
+  --text-xs: 0.75rem;   /* 12px */
+  --text-sm: 0.875rem;  /* 14px */
+  --text-md: 1rem;      /* 16px */
+  --text-lg: 1.25rem;   /* 20px */
+  --text-xl: 1.5rem;    /* 24px */
+  --text-2xl: 2rem;     /* 32px */
+
+  /* 🔹 Relative Sizes (em) */
+  --btn-padding-y: 0.5em;
+  --btn-padding-x: 1em;
+
+  /* 🔹 Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* 🔹 Width / Height */
+  --container-width: 1200px;
+  --input-height: 2.5rem;
+
+  /* 🔹 Line Height */
+  --line-normal: 1.5;
+  --line-tight: 1.2;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom ,#035850,#4de2d3, #c9e6ff);
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+/* ── Page Header ── */
+.page-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #a78bfa, #60a5fa, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+}
+
+.page-header p {
+    color: var(--primary);
+    margin-top: 8px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* ── Section Layout ── */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.example-section {
+    background: #1a1a2e;
+    border: 1px solid var();
+    border-radius: 16px;
+    padding: var(--space-2xl) ;
+    position: relative;
+}
+
+.example-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+    color: #c4b5fd;
+}
+
+.tag {
+    position: absolute;
+    top: -14px;
+    left: 28px;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   Example 1 — Stylish Blockquote
+   ::before = opening quote mark
+   ::after  = closing quote mark
+   ============================================ */
+
+.fancy-quote {
+    position: relative;
+    background: #16213e;
+    border-left: 4px solid #7c3aed;
+    border-radius: 8px;
+    padding: 30px 40px;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #d1d5db;
+    line-height: 1.8;
+}
+
+.fancy-quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    font-size: 6rem;
+    color: #7c3aed;
+    opacity: 0.4;
+    font-style: normal;
+    line-height: 1;
+    font-family: Georgia, serif;
+}
+
+.fancy-quote::after {
+    content: '\201D';
+    position: absolute;
+    bottom: -40px;
+    right: 16px;
+    font-size: 6rem;
+    color: #2563eb;
+    opacity: 0.4;
+    font-style: normal;
+    line-height: 1;
+    font-family: Georgia, serif;
+}
+
+.fancy-quote cite {
+    display: block;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #9ca3af;
+    font-style: normal;
+    text-align: right;
+}
+
+/* ============================================
+   Example 2 — Animated Underline Links
+   ::after creates the sliding underline bar
+   ::before adds the arrow prefix
+   ============================================ */
+
+.link-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.underline-link {
+    position: relative;
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+
+.underline-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(153deg, #998808, #f2fa0b);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+.underline-link:hover::after {
+    width: 100%;
+}
+
+.underline-link::before {
+    content: '→ ';
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    transform: translateX(-6px);
+}
+
+.underline-link:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ============================================
+   Example 3 — Custom CSS Tooltip
+   ::before = tooltip box (text via attr())
+   ::after  = arrow triangle pointing down
+   ============================================ */
+
+.tooltip-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 10px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    background: #1e3a5f;
+    color: #93c5fd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.tooltip:hover {
+    background: #1d4ed8;
+    color: #fff;
+}
+
+.tooltip::before {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.85);
+    background: #7c3aed;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.85);
+    border: 6px solid transparent;
+    border-top-color: #7c3aed;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* ============================================
+   Example 4 — Ribbon Cards
+   ::before = folded corner shape
+   ::after  = ribbon label text
+   ============================================ */
+
+.cards-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.ribbon-card {
+    position: relative;
+    background: #16213e;
+    border-radius: 12px;
+    padding: 30px 24px 24px;
+    flex: 1 1 220px;
+    overflow: hidden;
+    border: 1px solid #2d2d4e;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ribbon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.25);
+}
+
+.ribbon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.ribbon-card::after {
+    position: absolute;
+    top: 6px;
+    right: 4px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.ribbon-hot::before {
+    border-width: 0 60px 60px 0;
+    border-color: transparent #ef4444 transparent transparent;
+}
+
+.ribbon-hot::after {
+    content: 'HOT';
+}
+
+.ribbon-new::before {
+    border-width: 0 60px 60px 0;
+    border-color: transparent #10b981 transparent transparent;
+}
+
+.ribbon-new::after {
+    content: 'NEW';
+}
+
+.ribbon-card h3 {
+    color: #e2e8f0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.ribbon-card p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Example 5 — Decorative Divider
+   ::before and ::after = gradient lines
+   ============================================ */
+
+.divider-text {
+    text-align: center;
+    color: #9ca3af;
+    margin: 12px 0;
+}
+
+.fancy-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.fancy-divider::before,
+.fancy-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #7c3aed, transparent);
+}
+
+.fancy-divider span {
+    color: #a78bfa;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+/* ============================================
+   Example 6 — Glowing Button
+   ::before = blurred glow behind button
+   ::after  = gradient border outline
+   ============================================ */
+
+.btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.glow-btn {
+    position: relative;
+    padding: 14px 34px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.3s;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: #fff;
+    z-index: 0;
+}
+
+.glow-btn.secondary {
+    background: linear-gradient(135deg, #059669, #0ea5e9);
+}
+
+.glow-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(14px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.glow-btn::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, #a78bfa, #60a5fa);
+    border-radius: inherit;
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.glow-btn:hover {
+    transform: translateY(-2px);
+}
+
+.glow-btn:hover::before {
+    opacity: 0.6;
+}
+
+.glow-btn:hover::after {
+    opacity: 1;
+}
+
+/* ============================================
+   Example 7 — Custom List Bullets
+   ::before = gradient filled circle
+   ::after  = white dot in the center
+   ============================================ */
+
+.fancy-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.fancy-list li {
+    position: relative;
+    padding-left: 36px;
+    font-size: 1rem;
+    color: #d1d5db;
+    transition: color 0.3s;
+    cursor: default;
+}
+
+.fancy-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fancy-list li::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.fancy-list li:hover {
+    color: #a78bfa;
+}
+
+.fancy-list li:hover::before {
+    transform: translateY(-50%) scale(1.25);
+    box-shadow: 0 0 12px #7c3aed;
+}
+
+/* ============================================
+   Example 8 — Hover Image Overlay
+   ::before = dark translucent overlay
+   ::after  = "View Details" label
+   ============================================ */
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.img-card {
+    position: relative;
+    flex: 1 1 200px;
+    height: 150px;
+    border-radius: 12px;
+    background: var(--bg);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img-card span {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 2;
+    transition: bottom 0.4s ease;
+}
+
+.img-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.img-card::after {
+    content: 'View Details';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1.5px solid rgba(255,255,255,0.7);
+    padding: 6px 16px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 2;
+}
+
+.img-card:hover::before {
+    opacity: 1;
+}
+
+.img-card:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.img-card:hover span {
+    bottom: 8px;
+}
+
+/* ============================================
+   Example 9 — Auto-numbered Steps with counter()
+   ::before = numbered circle via CSS counter
+   ::after  = chevron arrow on hover
+   ============================================ */
+
+.steps-list {
+    list-style: none;
+    counter-reset: steps;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.steps-list li {
+    position: relative;
+    padding: 16px 20px 16px 70px;
+    background: #16213e;
+    border-radius: 10px;
+    color: #d1d5db;
+    font-size: 0.97rem;
+    line-height: 1.5;
+    border: 1px solid #2d2d4e;
+    transition: border-color 0.3s, background 0.3s;
+    counter-increment: steps;
+}
+
+.steps-list li:hover {
+    background: #1e2d4f;
+    border-color: #7c3aed;
+}
+
+.steps-list li::before {
+    content: counter(steps);
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.steps-list li::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #7c3aed;
+    border-right: 2px solid #7c3aed;
+    transform: translateY(-50%) rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.steps-list li:hover::after {
+    opacity: 1;
+}

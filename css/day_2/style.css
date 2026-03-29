@@ -1,0 +1,32 @@
+/* syntax */
+selector {
+   property: value;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: blue;
+    background-color: red;
+}
+
+h2 {
+    color: green;
+    background-color: yellow;
+}
+
+.text1{
+    font-size: 20px;
+    color: rgb(237, 6, 237);
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 200px;
+    background-color: chocolate;
+}
